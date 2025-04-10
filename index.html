@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Java Programming</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Learn Java Programming</h1>
+        <nav class="navbar navbar-expand navbar-dark justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#intro">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#basics">Basics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#setup">Setup</a></li>
+                <li class="nav-item"><a class="nav-link" href="#structure">Structure</a></li>
+                <li class="nav-item"><a class="nav-link" href="#fundamentals">Fundamentals</a></li>
+                <li class="nav-item"><a class="nav-link" href="#operators">Operators</a></li>
+                <li class="nav-item"><a class="nav-link" href="#input">Input</a></li>
+                <li class="nav-item"><a class="nav-link" href="#examples">Examples</a></li>
+                <li class="nav-item"><a class="nav-link" href="#practices">Best Practices</a></li>
+                <li class="nav-item"><a class="nav-link" href="#next">Next Steps</a></li>
+                <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section id="intro">
+            <h2>1. Introduction to Java</h2>
+            <p>Welcome to your journey into Java! This guide provides a beginner-friendly overview of Java fundamentals.</p>
+            <details>
+                <summary>What is Java?</summary>
+                <p>Java is a simple, modern, general-purpose, object-oriented programming language used to develop console, window, web, and mobile applications.</p>
+            </details>
+            <details>
+                <summary>Key Features</summary>
+                <ul>
+                    <li><strong>Platform Independent:</strong> Write once, run anywhere (WORA) via JVM.</li>
+                    <li><strong>Supports Multiple Apps:</strong> Console, window, web, mobile.</li>
+                    <li><strong>Exception Handling:</strong> Manages runtime errors.</li>
+                    <li><strong>Multithreading:</strong> Concurrent task execution.</li>
+                    <li><strong>Database Programming:</strong> Supports connectivity.</li>
+                    <li><strong>Security:</strong> Built-in features.</li>
+                    <li><strong>Strictly Typed:</strong> Explicit data types.</li>
+                    <li><strong>Case Sensitive:</strong> Upper/lowercase matters.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Java’s Evolution</summary>
+                <p>Developed in 1992 as "OAK" by James Gosling at Sun Microsystems. Renamed to Java in 1995; now maintained by Oracle.</p>
+            </details>
+        </section>
+
+        <section id="basics">
+            <h2>2. Java Basics</h2>
+            <details>
+                <summary>Software Classification</summary>
+                <ul>
+                    <li><strong>System Software:</strong> e.g., OS – interfaces user and hardware.</li>
+                    <li><strong>Application Software:</strong> Depends on system software; includes:
+                        <ul>
+                            <li><strong>Packages:</strong> Task-specific tools (e.g., MS Office).</li>
+                            <li><strong>Languages:</strong> Communication medium (e.g., Java).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+            <details>
+                <summary>Language Types</summary>
+                <ul>
+                    <li><strong>Low-Level (LLL):</strong> Hard to write/understand (e.g., machine code).</li>
+                    <li><strong>High-Level (HLL):</strong> Easy to write/understand (e.g., Java).</li>
+                    <li><strong>Middle-Level (MLL):</strong> Combines LLL and HLL (e.g., C).</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Key Terms</summary>
+                <ul>
+                    <li><strong>Platform:</strong> Hardware + OS combination.</li>
+                    <li><strong>Framework:</strong> Pre-built classes/interfaces for development.</li>
+                </ul>
+            </details>
+        </section>
+
+        <section id="setup">
+            <h2>3. Setting Up Java</h2>
+            <details>
+                <summary>Java Directory Structure</summary>
+                <ul>
+                    <li><strong>JDK:</strong> Java Development Kit – tools for coding.</li>
+                    <li><strong>JRE:</strong> Java Runtime Environment – runs apps.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Environment Setup</summary>
+                <p><strong>Set PATH:</strong></p>
+                <ol>
+                    <li>Define <code>JAVA_HOME</code> (e.g., <code>C:\Program Files\Java\jdk-21</code>).</li>
+                    <li>Add <code>%JAVA_HOME%\bin</code> to system PATH.</li>
+                    <li>Verify: <code>java -version</code>.</li>
+                </ol>
+                <img src="https://www.javatpoint.com/images/java-compilation.png" alt="Java Compilation Diagram" class="img-fluid mt-3">
+            </details>
+        </section>
+
+        <section id="structure">
+            <h2>4. Java Program Structure</h2>
+            <details>
+                <summary>Basic Structure</summary>
+                <div class="code-container">
+                    <pre><code class="language-java">class ClassName {
+    public static void main(String[] args) {
+        // Statements
+    }
+}</code></pre>
+                    <button class="btn btn-sm btn-outline-light copy-btn" data-clipboard-target="pre">Copy Code</button>
+                </div>
+                <ul>
+                    <li><code>public</code>: Access modifier.</li>
+                    <li><code>static</code>: No object needed.</li>
+                    <li><code>void</code>: No return value.</li>
+                    <li><code>main</code>: Entry point.</li>
+                    <li><code>String[] args</code>: Command-line arguments.</li>
+                </ul>
+                <img src="https://www.guru99.com/images/1/011819_0614_WhatisJVMJa1.png" alt="JVM Diagram" class="img-fluid mt-3">
+            </details>
+            <details>
+                <summary>Compilation and Execution</summary>
+                <ul>
+                    <li><strong>Compile:</strong> <code>javac FileName.java</code>.</li>
+                    <li><strong>Run:</strong> <code>java ClassName</code>.</li>
+                    <li><strong>Note:</strong> Match file and class names; case-sensitive execution.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Output Statements</summary>
+                <ul>
+                    <li><code>System.out.print("text")</code>: Same line.</li>
+                    <li><code>System.out.println("text")</code>: New line.</li>
+                    <li><code>System.out.printf("format", vars)</code>: Formatted.</li>
+                </ul>
+            </details>
+        </section>
+
+        <section id="fundamentals">
+            <h2>5. Java Language Fundamentals</h2>
+            <details>
+                <summary>Tokens</summary>
+                <ul>
+                    <li><strong>Identifiers:</strong> Names for variables/classes.</li>
+                    <li><strong>Literals:</strong> Constants (e.g., <code>5</code>, <code>"hello"</code>).</li>
+                    <li><strong>Keywords:</strong> Reserved words (e.g., <code>int</code>).</li>
+                    <li><strong>Operators:</strong> Symbols (e.g., <code>+</code>).</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Data Types</summary>
+                <table class="table table-striped">
+                    <thead>
+                        <tr><th>Type</th><th>Default</th><th>Memory</th><th>Wrapper</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>byte</code></td><td>0</td><td>1 byte</td><td><code>Byte</code></td></tr>
+                        <tr><td><code>short</code></td><td>0</td><td>2 bytes</td><td><code>Short</code></td></tr>
+                        <tr><td><code>int</code></td><td>0</td><td>4 bytes</td><td><code>Integer</code></td></tr>
+                        <tr><td><code>long</code></td><td>0L</td><td>8 bytes</td><td><code>Long</code></td></tr>
+                        <tr><td><code>float</code></td><td>0.0f</td><td>4 bytes</td><td><code>Float</code></td></tr>
+                        <tr><td><code>double</code></td><td>0.0d</td><td>8 bytes</td><td><code>Double</code></td></tr>
+                        <tr><td><code>char</code></td><td>'\u0000'</td><td>2 bytes</td><td><code>Character</code></td></tr>
+                        <tr><td><code>boolean</code></td><td>false</td><td>-</td><td><code>Boolean</code></td></tr>
+                    </tbody>
+                </table>
+            </details>
+            <details>
+                <summary>Literals</summary>
+                <ul>
+                    <li><strong>Integer:</strong> <code>10</code>, <code>0b10</code>, <code>0o10</code>, <code>0x10</code>.</li>
+                    <li><strong>Float:</strong> <code>3.14f</code>.</li>
+                    <li><strong>Double:</strong> <code>3.14</code>.</li>
+                    <li><strong>Char:</strong> <code>'A'</code>.</li>
+                    <li><strong>Boolean:</strong> <code>true</code>, <code>false</code>.</li>
+                    <li><strong>String:</strong> <code>"Hello"</code>.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Variables</summary>
+                <p><strong>Local Variables:</strong> Inside methods; must be initialized.</p>
+                <p><strong>Syntax:</strong> <code>type variableName = value;</code></p>
+            </details>
+        </section>
+
+        <section id="operators">
+            <h2>6. Operators</h2>
+            <details>
+                <summary>Arithmetic</summary>
+                <p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
+            </details>
+            <details>
+                <summary>Assignment</summary>
+                <p><code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code></p>
+            </details>
+            <details>
+                <summary>Unary</summary>
+                <p><code>++</code> (increment), <code>--</code> (decrement)</p>
+                <ul>
+                    <li><strong>Pre:</strong> <code>++x</code></li>
+                    <li><strong>Post:</strong> <code>x++</code></li>
+                </ul>
+            </details>
+            <details>
+                <summary>Bitwise</summary>
+                <p><code>&</code>, <code>|</code>, <code>^</code>, <code><<</code>, <code>>></code>, <code>~</code></p>
+            </details>
+            <details>
+                <summary>Ternary</summary>
+                <p><code>condition ? valueIfTrue : valueIfFalse</code></p>
+            </details>
+        </section>
+
+        <section id="input">
+            <h2>7. Input in Java</h2>
+            <details>
+                <summary>Command-Line Arguments</summary>
+                <div class="code-container">
+                    <pre><code class="language-java">class Example {
+    public static void main(String[] args) {
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        System.out.println(a + b);
+    }
+}</code></pre>
+                    <button class="btn btn-sm btn-outline-light copy-btn" data-clipboard-target="pre">Copy Code</button>
+                </div>
+                <p>Run: <code>java Example 5 10</code></p>
+            </details>
+            <details>
+                <summary>Using Scanner</summary>
+                <div class="code-container">
+                    <pre><code class="language-java">import java.util.Scanner;
+class Example {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        System.out.println("You entered: " + num);
+    }
+}</code></pre>
+                    <button class="btn btn-sm btn-outline-light copy-btn" data-clipboard-target="pre">Copy Code</button>
+                </div>
+                <p>Methods: <code>nextInt()</code>, <code>nextFloat()</code>, etc.</p>
+            </details>
+        </section>
+
+        <section id="examples">
+            <h2>8. Sample Programs</h2>
+            <details>
+                <summary>Sum of Two Integers</summary>
+                <div class="code-container">
+                    <pre><code class="language-java">class Sum {
+    public static void main(String[] args) {
+        int a = 5, b = 10;
+        int sum = a + b;
+        System.out.println("Sum is: " + sum);
+    }
+}</code></pre>
+                    <button class="btn btn-sm btn-outline-light copy-btn" data-clipboard-target="pre">Copy Code</button>
+                </div>
+            </details>
+            <details>
+                <summary>Area of a Square</summary>
+                <div class="code-container">
+                    <pre><code class="language-java">import java.util.Scanner;
+class Square {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter side: ");
+        int side = sc.nextInt();
+        int area = side * side;
+        int perimeter = 4 * side;
+        System.out.println("Area: " + area);
+        System.out.println("Perimeter: " + perimeter);
+    }
+}</code></pre>
+                    <button class="btn btn-sm btn-outline-light copy-btn" data-clipboard-target="pre">Copy Code</button>
+                </div>
+            </details>
+        </section>
+
+        <section id="practices">
+            <h2>9. Best Practices</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Use meaningful variable names.</li>
+                <li class="list-group-item">Initialize local variables before use.</li>
+                <li class="list-group-item">Match file and class names.</li>
+                <li class="list-group-item">Add comments for clarity (e.g., <code>// comment</code>).</li>
+            </ul>
+        </section>
+
+        <section id="next">
+            <h2>10. Next Steps</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Explore OOP (classes, objects, inheritance).</li>
+                <li class="list-group-item">Learn exception handling and multithreading.</li>
+                <li class="list-group-item">Build projects (e.g., calculators, games).</li>
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h2>11. Java Quiz</h2>
+            <p>Test your knowledge with this quick quiz!</p>
+            <form id="quizForm">
+                <div class="mb-3">
+                    <p>1. What is the entry point of a Java program?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="a">
+                        <label class="form-check-label">a) main()</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="b">
+                        <label class="form-check-label">b) start()</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="c">
+                        <label class="form-check-label">c) run()</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p>2. Which data type stores a single character?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="a">
+                        <label class="form-check-label">a) int</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="b">
+                        <label class="form-check-label">b) char</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="c">
+                        <label class="form-check-label">c) String</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="quizResult" class="mt-3"></div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 fixed-bottom">
+        <p>Resources: 
+            <a href="https://docs.oracle.com/en/java/" target="_blank">Java Docs</a> | 
+            <a href="https://www.eclipse.org/downloads/" target="_blank">Eclipse IDE</a> | 
+            <a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a> | 
+            <a href="https://xai.com" target="_blank">Ask Grok (xAI)</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <!-- Clipboard.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
